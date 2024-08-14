@@ -1,7 +1,7 @@
 {
   "name": "backedn",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is the  backend of the health care app",
   "main": "server.js",
   "type": "module",
   "scripts": {

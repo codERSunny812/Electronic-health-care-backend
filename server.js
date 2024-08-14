@@ -3,6 +3,8 @@ import { connectDB } from './Database/Db.js';
 import dotenv from 'dotenv'; 
 import authRoute from './routes/auth.js'
 
+
+
 // Load environment variables from .env file
 dotenv.config();
 
@@ -21,6 +23,7 @@ connectDB();
 
 //using the route 
 app.use('/api/auth',authRoute)
+// app.use('/api/appointment',)
 
 
 

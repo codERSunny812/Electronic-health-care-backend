@@ -20,11 +20,10 @@ const AppointmentSchema = new mongoose.Schema({
         enum: ['pending', 'confirmed', 'completed', 'cancelled'],
         default: 'pending',
     },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-    },
-});
+},{
+    timestamps: true,
+}
+);
 
 const Appointment = mongoose.model('Appointment', AppointmentSchema);
 
