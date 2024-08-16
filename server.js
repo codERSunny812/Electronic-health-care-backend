@@ -1,7 +1,8 @@
-import express   from 'express'
+import express from 'express'
 import { connectDB } from './Database/Db.js';
-import dotenv from 'dotenv'; 
+import dotenv from 'dotenv';
 import authRoute from './routes/auth.js'
+import docRoute from './routes/doctorRoute.js'
 
 
 
@@ -22,12 +23,13 @@ connectDB();
 
 
 //using the route 
-app.use('/api/auth',authRoute)
+app.use('/api/auth', authRoute)
+app.use('/api/doctor', docRoute)
 // app.use('/api/appointment',)
 
 
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
@@ -36,7 +38,7 @@ app.get('/',(req,res)=>{
 //port allocation
 const port = process.env.PORT || 3002;
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`server  is running ${port}`)
 });
 
